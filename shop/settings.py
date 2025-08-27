@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'main',
     'cart',
     'users',
+    'orders',
+    'payment',
+    
     
 ]
 
@@ -150,3 +153,6 @@ SESSION_COOKIE_AGE = 86400
 SESSION_SAVE_EVERY_REQUEST = True
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET')
